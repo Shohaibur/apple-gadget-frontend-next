@@ -25,7 +25,7 @@ export default function AddMenu() {
       
         console.log(formData);
         try {
-            const response = await axios.post("https://advancedwebtech-useremployee-production.up.railway.app/Product/addmenu",
+            const response = await axios.post("http://localhost:3000/product/add",
                 formData, {
                 headers: {
                     "Content-Type": "application/json"

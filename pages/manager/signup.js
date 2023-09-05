@@ -11,14 +11,7 @@ export default function SignUp() {
         formState: { errors },
         reset,
     } = useForm();
-    // const validateFile = (value) => {
-    //     const file = value[0];
-    //     const allowedtypes = ["image/jpg", "image/png"];
-
-    //     if (!allowedtypes.includes(file.type)){
-    //         return false;
-    //     }
-    // }
+   
 
     const [success, setSuccess] = useState('')
     const onSubmit = async (data) => {
@@ -35,7 +28,7 @@ export default function SignUp() {
         console.log(formData);  
     
         try {
-            const response = await axios.post("https://advancedwebtech-useremployee-production.up.railway.app/manager/signup",
+            const response = await axios.post("http://localhost:3001/signup",
             formData, {
              headers: {
                 "Content-Type": "application/json"
